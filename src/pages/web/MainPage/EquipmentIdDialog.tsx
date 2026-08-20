@@ -373,8 +373,8 @@ export function EquipmentIdDialog({
                         </TableCell>
                       </TableRow>
                     ) : historyData.length > 0 ? (
-                      historyData.map((history) => (
-                        <TableRow key={history.id}>
+                      historyData.map((history, i) => (
+                        <TableRow key={i}>
                           <TableCell className="text-center">
                             {history.date}
                           </TableCell>
