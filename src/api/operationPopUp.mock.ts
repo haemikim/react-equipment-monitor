@@ -1,0 +1,317 @@
+import type {
+  DailySummary,
+  OperationTimeSummary,
+  OperationHistory,
+} from "@/pages/web/MainPage/types";
+
+export const dailySummary: Record<string, DailySummary> = {
+  "EQ-001": {
+    fuelLevel: 74,
+    hydraulicOilTemperature: 68,
+    coolantTemperature: 82,
+    transmissionOilTemperature: 82,
+  },
+
+  "EQ-002": {
+    fuelLevel: 55,
+    hydraulicOilTemperature: 64,
+    coolantTemperature: 78,
+    transmissionOilTemperature: 75,
+  },
+
+  "EQ-005": {
+    fuelLevel: 63,
+    hydraulicOilTemperature: 0,
+    coolantTemperature: 0,
+    transmissionOilTemperature: 0,
+  },
+};
+
+export const operationTimeSummary: Record<string, OperationTimeSummary[]> = {
+  "EQ-001": [
+    {
+      category: "엔진가동",
+      today: "06h 20m",
+      sevenDayAverage: "06h 05m",
+      rate: 96,
+      color: "bg-blue-500",
+    },
+    {
+      category: "작업시간",
+      today: "04h 35m",
+      sevenDayAverage: "04h 18m",
+      rate: 72,
+      color: "bg-orange-500",
+    },
+    {
+      category: "주행시간",
+      today: "03h 10m",
+      sevenDayAverage: "03h 25m",
+      rate: 50,
+      color: "bg-red-500",
+    },
+    {
+      category: "공회전",
+      today: "01h 15m",
+      sevenDayAverage: "01h 05m",
+      rate: 20,
+      color: "bg-green-500",
+    },
+  ],
+
+  "EQ-002": [
+    {
+      category: "엔진가동",
+      today: "02h 10m",
+      sevenDayAverage: "02h 35m",
+      rate: 45,
+      color: "bg-blue-500",
+    },
+    {
+      category: "작업시간",
+      today: "01h 05m",
+      sevenDayAverage: "01h 20m",
+      rate: 25,
+      color: "bg-orange-500",
+    },
+    {
+      category: "주행시간",
+      today: "00h 48m",
+      sevenDayAverage: "01h 05m",
+      rate: 18,
+      color: "bg-red-500",
+    },
+    {
+      category: "공회전",
+      today: "01h 17m",
+      sevenDayAverage: "01h 10m",
+      rate: 30,
+      color: "bg-green-500",
+    },
+  ],
+
+  "EQ-005": [
+    {
+      category: "엔진가동",
+      today: "00h 00m",
+      sevenDayAverage: "03h 10m",
+      rate: 0,
+      color: "bg-blue-500",
+    },
+    {
+      category: "작업시간",
+      today: "00h 00m",
+      sevenDayAverage: "02h 05m",
+      rate: 0,
+      color: "bg-orange-500",
+    },
+    {
+      category: "주행시간",
+      today: "00h 00m",
+      sevenDayAverage: "01h 40m",
+      rate: 0,
+      color: "bg-red-500",
+    },
+    {
+      category: "공회전",
+      today: "00h 00m",
+      sevenDayAverage: "00h 35m",
+      rate: 0,
+      color: "bg-green-500",
+    },
+  ],
+};
+
+export const mockOperationHistory: OperationHistory[] = [
+  // =========================
+  // EQ-001 / 지게차 01
+  // =========================
+  {
+    id: 1,
+    equipmentId: "EQ-001",
+    date: "2026-08-10",
+    workTime: "04h 35m",
+    drivingTime: "03h 10m",
+    idleTime: "01h 15m",
+    operationRateA: 82,
+    operationRateB: 78,
+  },
+  {
+    id: 2,
+    equipmentId: "EQ-001",
+    date: "2026-08-09",
+    workTime: "06h 10m",
+    drivingTime: "04h 45m",
+    idleTime: "01h 25m",
+    operationRateA: 88,
+    operationRateB: 84,
+  },
+  {
+    id: 3,
+    equipmentId: "EQ-001",
+    date: "2026-08-08",
+    workTime: "05h 40m",
+    drivingTime: "04h 20m",
+    idleTime: "01h 20m",
+    operationRateA: 79,
+    operationRateB: 75,
+  },
+  {
+    id: 4,
+    equipmentId: "EQ-001",
+    date: "2026-08-07",
+    workTime: "06h 25m",
+    drivingTime: "05h 00m",
+    idleTime: "01h 25m",
+    operationRateA: 91,
+    operationRateB: 87,
+  },
+  {
+    id: 5,
+    equipmentId: "EQ-001",
+    date: "2026-08-06",
+    workTime: "04h 50m",
+    drivingTime: "03h 35m",
+    idleTime: "01h 15m",
+    operationRateA: 76,
+    operationRateB: 73,
+  },
+  {
+    id: 6,
+    equipmentId: "EQ-001",
+    date: "2026-08-05",
+    workTime: "06h 20m",
+    drivingTime: "04h 35m",
+    idleTime: "01h 45m",
+    operationRateA: 82,
+    operationRateB: 79,
+  },
+
+  // =========================
+  // EQ-002 / 지게차 02
+  // =========================
+  {
+    id: 7,
+    equipmentId: "EQ-002",
+    date: "2026-08-10",
+    workTime: "01h 05m",
+    drivingTime: "00h 48m",
+    idleTime: "01h 17m",
+    operationRateA: 25,
+    operationRateB: 22,
+  },
+  {
+    id: 8,
+    equipmentId: "EQ-002",
+    date: "2026-08-09",
+    workTime: "02h 15m",
+    drivingTime: "01h 20m",
+    idleTime: "01h 10m",
+    operationRateA: 42,
+    operationRateB: 38,
+  },
+  {
+    id: 9,
+    equipmentId: "EQ-002",
+    date: "2026-08-08",
+    workTime: "03h 05m",
+    drivingTime: "02h 10m",
+    idleTime: "00h 55m",
+    operationRateA: 55,
+    operationRateB: 51,
+  },
+  {
+    id: 10,
+    equipmentId: "EQ-002",
+    date: "2026-08-07",
+    workTime: "04h 02m",
+    drivingTime: "02h 55m",
+    idleTime: "01h 07m",
+    operationRateA: 56,
+    operationRateB: 52,
+  },
+  {
+    id: 11,
+    equipmentId: "EQ-002",
+    date: "2026-08-06",
+    workTime: "02h 40m",
+    drivingTime: "01h 50m",
+    idleTime: "00h 50m",
+    operationRateA: 38,
+    operationRateB: 35,
+  },
+  {
+    id: 12,
+    equipmentId: "EQ-002",
+    date: "2026-08-05",
+    workTime: "03h 15m",
+    drivingTime: "02h 10m",
+    idleTime: "01h 05m",
+    operationRateA: 45,
+    operationRateB: 43,
+  },
+
+  // =========================
+  // EQ-005 / 지게차 03
+  // =========================
+  {
+    id: 13,
+    equipmentId: "EQ-005",
+    date: "2026-08-10",
+    workTime: "00h 00m",
+    drivingTime: "00h 00m",
+    idleTime: "00h 00m",
+    operationRateA: 0,
+    operationRateB: 0,
+  },
+  {
+    id: 14,
+    equipmentId: "EQ-005",
+    date: "2026-08-09",
+    workTime: "02h 10m",
+    drivingTime: "01h 25m",
+    idleTime: "00h 45m",
+    operationRateA: 32,
+    operationRateB: 28,
+  },
+  {
+    id: 15,
+    equipmentId: "EQ-005",
+    date: "2026-08-08",
+    workTime: "03h 40m",
+    drivingTime: "02h 35m",
+    idleTime: "01h 05m",
+    operationRateA: 48,
+    operationRateB: 44,
+  },
+  {
+    id: 16,
+    equipmentId: "EQ-005",
+    date: "2026-08-07",
+    workTime: "01h 50m",
+    drivingTime: "01h 10m",
+    idleTime: "00h 40m",
+    operationRateA: 27,
+    operationRateB: 24,
+  },
+  {
+    id: 17,
+    equipmentId: "EQ-005",
+    date: "2026-08-06",
+    workTime: "02h 25m",
+    drivingTime: "01h 40m",
+    idleTime: "00h 45m",
+    operationRateA: 35,
+    operationRateB: 31,
+  },
+  {
+    id: 18,
+    equipmentId: "EQ-005",
+    date: "2026-08-05",
+    workTime: "01h 10m",
+    drivingTime: "00h 40m",
+    idleTime: "00h 30m",
+    operationRateA: 19,
+    operationRateB: 17,
+  },
+];
